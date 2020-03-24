@@ -1,32 +1,5 @@
 @import "vars"
 
-/*==========  Desktop First  ==========*/
-
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
-	/**/
-
-
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-	/**/
-
-
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
-	/**/
-
-
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
-	/**/
-
-
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
-	/**/
-
-
 /*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */
@@ -41,15 +14,31 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
+	
+	h1
+		font-size: 2.5rem
+	h2
+		font-size: 2rem
+	
+	#header
+		.specialty
+			margin: 10px 0 0 -25px
 	/**/
 
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
+
+	#header
+		.specialty
+			margin: 10px 0 0 -70px
 	/**/
 
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
+	#header
+		.specialty
+			margin: 10px 0 0 -50px
 	/**/
 
