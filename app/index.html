@@ -29,100 +29,268 @@
 </head>
 
 <body>
-
-	<header id="header">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="about-me">
-						<div class="row no-gutters">
-							<div class="col-12 col-md-6 col-lg-5 col-xl-4">
-								<div class="name d-flex justify-content-start">
-									<h1>
-										<span class="green bold">Е</span>лисеев <span class="green bold">Ник</span>ита/
-									</h1>
+<div id="app">
+	<div class="container main-container">
+		<header id="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="about-me">
+							<div class="row no-gutters">
+								<div class="col-12 col-md-6 col-lg-5 col-xl-4">
+									<div class="name d-flex justify-content-start">
+										<h1>
+											<span class="green bold">Е</span>лисеев<span class="green bold">Ник</span>ита/
+										</h1>
+									</div>
 								</div>
-							</div>
-							<div class="col-12 col-md-6 col-lg-3">
-								<div class="specialty">
-									<h2> <span class="bold accent">Web</span>-разработчик</h2>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-
-	<section id="instruments">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="title">
-						<h2><span class="accent"></span>Инструенты</h2>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-12">
-					<div class="pallete-skills">
-						<div class="row">
-							<div class="col-12">
-								<div class="html d-flex justify-content-center">
-									<span class="orange uppercase">html<i class="fab fa-html5"></i></i></span>
-								</div>
-							</div>
-						</div>
-						<div class="row d-flex justify-content-center">
-							<div class="col-6">
-								<div class="css d-flex justify-content-center">
-									<span class="blue uppercase">css<i class="fab fa-css3" aria-hidden="true"></i></span>
-								</div>
-							</div>
-							<div class="col-6">
-								<div class="js d-flex justify-content-center">
-									<span class="red">Adobe<i class="fab fa-adobe"></i></span>
-								</div>
-							</div>
-						</div>
-						<div class="row d-flex justify-content-center">
-							<div class="col-6">
-								<div class="css d-flex justify-content-start">
-									<span class="yellow">JavaScript<i class="fab fa-js"></i></span>
-								</div>
-							</div>
-							<div class="col-6">
-								<div class="js d-flex justify-content-end">
-									<span class="accent uppercase">Sass<i class="fab fa-sass"></i></span>
-								</div>
-							</div>
-						</div>
-						<div class="row d-flex justify-content-center">
-							<div class="col-6">
-								<div class="css d-flex justify-content-center">
-									<span class="gulp">Gulp<i class="fab fa-gulp"></i></span>
-								</div>
-							</div>
-							<div class="col-6">
-								<div class="js d-flex justify-content-center">
-									<span class="green">Vue.js<i class="fab fa-vuejs"></i></span>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-12">
-								<div class="html d-flex justify-content-center">
-									<span class="black">GitHub<i class="fab fa-github"></i></span>
+								<div class="col-12 col-md-6 col-lg-3">
+									<div class="specialty">
+										<h2> <span class="bold accent">Web</span>-разработчик</h2>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</header>
+	
+		<section id="instruments">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="title">
+							<h2>/<span class="green bold">И</span>нструенты</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<div class="pallete-skills">
+							<div class="row">
+								<div class="col-12">
+									<div class="row d-flex justify-content-center">
+										<div class="col-12 col-md-5">
+											<div v-on:click="visibleHtml = !visibleHtml" v-if="visibleHtml" class="info-instrument info-html">
+												<div class="title d-flex justify-content-center">
+													<h2 class="bold uppercase">html</h2>
+													<h2 class="orange"><i class="fab fa-html5"></i></h2>
+												</div>
+												<div class="description">
+													<span>
+														HTML (HyperText Markup Language — «язык гипертекстовой разметки»)
+														— это скилет вашего будущего сайта.
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row d-flex justify-content-center">
+										<div class="col-12 col-md-5">
+											<div v-on:click="visibleCss = !visibleCss" v-if="visibleCss" class="info-instrument info-css">
+												<div class="title d-flex justify-content-center">
+													<h2 class="bold uppercase">CSS</h2>
+													<h2 class="blue"><i class="fab fa-css3"></i></h2>
+												</div>
+												<div class="description">
+													<span>
+														CSS (Cascading Style Sheets - "язык таблиц стилей"). 
+														Отвечает за внеший вид: цвета, шрифты, отступы, тени,	— это кожа вашего будущего сайта.
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row d-flex justify-content-center">
+										<div class="col-12 col-md-5">
+											<div v-on:click="visibleJs = !visibleJs" v-if="visibleJs" class="info-instrument info-js">
+												<div class="title d-flex justify-content-center">
+													<h2 class="bold ">JavaScript</h2>
+													<h2 class="yellow"><i class="fab fa-js"></i></h2>
+												</div>
+												<div class="description">
+													<span>
+														JavaScript — это скриптовый язык, который заставляет статическую страницу двигаться без перезагрузки, — мышцы сайта.
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row d-flex justify-content-center">
+										<div class="col-12 col-md-5">
+											<div v-on:click="visibleAdobe = !visibleAdobe" v-if="visibleAdobe" class="info-instrument info-adobe">
+												<div class="title d-flex justify-content-center">
+													<h2 class="bold uppercase">Adobe</h2>
+													<h2 class="red"><i class="fab fa-adobe"></i></h2>
+												</div>
+												<div class="description">
+													<span>
+														Photoshop, Illustrator, XD, After Effects, Premier Pro 
+														— комплекс программ, необходимых для визуализации.
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row d-flex justify-content-center">
+										<div class="col-12 col-md-5">
+											<div  v-on:click="visibleSass = !visibleSass" v-if="visibleSass" class="info-instrument info-sass">
+												<div class="title d-flex justify-content-center">
+													<h2 class="bold uppercase">Sass</h2>
+													<h2 class="accent"><i class="fab fa-sass"></i></h2>
+												</div>
+												<div class="description">
+													<span>
+														Sass — css-препроцессор. Позволяет оптимизировать процесс написания CSS-стилей.
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row d-flex justify-content-center">
+										<div class="col-12 col-md-5">
+											<div v-on:click="visibleGulp = !visibleGulp" v-if="visibleGulp" class="info-instrument info-gulp">
+												<div class="title d-flex justify-content-center">
+													<h2 class="bold uppercase">Gulp</h2>
+													<h2 class="gulp"><i class="fab fa-gulp"></i></h2>
+												</div>
+												<div class="description">
+													<span>
+														Gulp — это таск-менеджер для автоматического выполнения часто используемых задач.
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row d-flex justify-content-center">
+										<div class="col-12 col-md-5">
+											<div v-on:click="visibleVue = !visibleVue" v-if="visibleVue" class="info-instrument info-vue">
+												<div class="title d-flex justify-content-center">
+													<h2 class="bold uppercase">Vue.js</h2>
+													<h2 class="green"><i class="fab fa-vuejs"></i></h2>
+												</div>
+												<div class="description">
+													<span>
+														Vue.js — это js-фреймворк, необходим для создания реактивности на странице.
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row d-flex justify-content-center">
+										<div class="col-12 col-md-5">
+											<div v-on:click="visibleGit = !visibleGit" v-if="visibleGit" class="info-instrument info-git">
+												<div class="title d-flex justify-content-center">
+													<h2 class="bold uppercase">GitHub</h2>
+													<h2 class="white"><i class="fab fa-github"></i></h2>
+												</div>
+												<div class="description">
+													<span>
+														GitHub — система контроля версий, позволяет быстро и удобно делиться кодом.
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<div class="instrument">
+										<div class="html d-flex justify-content-center">
+											<span v-on:click="visibleHtml = !visibleHtml" class="orange bold uppercase">html</span>
+										</div>
+										<div class="html d-flex justify-content-center">
+											<span v-on:click="visibleHtml = !visibleHtml" class="orange"><i class="fab fa-html5"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row d-flex justify-content-center">
+								<div class="col-6">
+									<div class="instrument">
+										<div class="css d-flex justify-content-center">
+											<span v-on:click="visibleCss = !visibleCss" class="blue bold uppercase">css</span>
+										</div>
+										<div class="css d-flex justify-content-center">
+											<span v-on:click="visibleCss = !visibleCss" class="blue"><i class="fab fa-css3" aria-hidden="true"></i></span>
+										</div>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="instrument">
+										<div class="adobe d-flex justify-content-center">
+											<span v-on:click="visibleAdobe = !visibleAdobe" class="red uppercase bold">Adobe</span>
+										</div>
+										<div class="adobe d-flex justify-content-center">
+											<span v-on:click="visibleAdobe = !visibleAdobe" class="red"><i class="fab fa-adobe"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row d-flex justify-content-center">
+								<div class="col-6">
+									<div class="instrument">
+										<div class="js d-flex justify-content-start align-items-center">
+											<span v-on:click="visibleJs = !visibleJs" class="yellow"><i class="fab fa-js"></i></span>
+											<span v-on:click="visibleJs = !visibleJs" class="yellow bold">JavaScript</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="instrument">
+										<div class="sass d-flex justify-content-end align-items-center">
+											<span v-on:click="visibleSass = !visibleSass" class="accent bold uppercase">Sass</span>
+											<span v-on:click="visibleSass = !visibleSass" class="accent uppercase"><i class="fab fa-sass"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row d-flex justify-content-center">
+								<div class="col-6">
+									<div class="instrument">
+										<div class="gulp d-flex justify-content-center">
+											<span  v-on:click="visibleGulp = !visibleGulp" class="gulp uppercase bold">Gulp</span>
+										</div>
+										<div class="gulp d-flex justify-content-center">
+											<span v-on:click="visibleGulp = !visibleGulp" class="gulp"><i class="fab fa-gulp"></i></span>
+										</div>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="instrument">
+										<div class="vue d-flex justify-content-center">
+											<span v-on:click="visibleVue = !visibleVue" class="green bold uppercase">Vue.js</span>
+										</div>
+										<div class="vue d-flex justify-content-center">
+											<span v-on:click="visibleVue = !visibleVue" class="green"><i class="fab fa-vuejs"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<div class="instrument">
+										<div class="git d-flex justify-content-center">
+											<span v-on:click="visibleGit = !visibleGit" class="white">GitHub</span>
+										</div>
+										<div class="git d-flex justify-content-center">
+											<span v-on:click="visibleGit = !visibleGit" class="white"><i class="fab fa-github"></i></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
 
+
+	<script src="libs/vue/vue.min.js"></script>
 	<script src="js/scripts.min.js"></script>
 
 </body>
