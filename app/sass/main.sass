@@ -61,6 +61,12 @@ body
 	background-color: $accent
 	color: #fff
 
+a
+	text-decoration: none
+
+a:hover
+	text-decoration: none
+
 .orange
 	color: $orange
 .green
@@ -94,14 +100,17 @@ h1
 h2
 	font-size: 1.7rem
 
+.click
+	cursor: pointer
+	span
+		transition: 1s
+
+.click:hover span
+	color: $white
 
 .main-container
 	padding-top: 150px
-	padding-right:15px
-	padding-left:15px
-	margin-right: auto
-	margin-left: auto
-	max-width: 1140px
+
 
 #app
 	padding: 20px
